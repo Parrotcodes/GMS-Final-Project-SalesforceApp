@@ -1,168 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Garage Management System - Web To Case</title>
-
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background: #f0f3f7;
-    }
-
-    .container {
-        width: 90%;
-        max-width: 650px;
-        background: #fff;
-        margin: 30px auto;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-        text-align: center;
-        margin-bottom: 20px;
-        color: #333;
-    }
-
-    label {
-        display: block;
-        margin-top: 15px;
-        font-weight: bold;
-        color: #444;
-    }
-
-    input, select, textarea {
-        width: 100%;
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-size: 15px;
-    }
-
-    textarea {
-        height: 120px;
-        resize: vertical;
-    }
-
-    button {
-        margin-top: 20px;
-        width: 100%;
-        padding: 12px;
-        border: none;
-        background: #0070d2;
-        color: white;
-        font-size: 16px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    button:hover {
-        background: #005bb5;
-    }
-
-    /* FOOTER */
-    footer {
-        text-align: center;
-        margin-top: 40px;
-        padding: 20px;
-        background: #222;
-        color: #eee;
-    }
-
-    footer a {
-        color: #4ea3ff;
-        text-decoration: none;
-        margin: 0 10px;
-    }
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GMS Garage Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f6f6f6;
+        }
+        header {
+            background: #1e1e1e;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #00d4ff;
+        }
+        .hero {
+            background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 0 0 10px black;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+        h2 {
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #007bff;
+            margin-top: 15px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #1e1e1e;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
-
 <body>
+    <header>
+        <h1>Garage Management System (GMS)</h1>
+        <p>Your Trusted Vehicle Service Partner</p>
+    </header>
 
-<div class="container">
-    <h2>Garage Management System - Support Case Form</h2>
+    <nav>
+        <a href="#webtolead">Web-To-Lead Form</a>
+        <a href="#webtocase">Web-To-Case Form</a>
+        <a href="#services">Services</a>
+    </nav>
 
-    <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgL000008xKnh" method="POST">
+    <div class="hero">
+        Welcome to the GMS Company Website
+    </div>
 
-        <input type="hidden" name="orgid" value="00DgL000008xKnh">
-        <input type="hidden" name="retURL" value="https://parrotcodes.github.io/GMS-Final-Project-SalesforceApp/">
+    <!-- ✅ UPDATED WEB-TO-LEAD FORM -->
+    <div class="container" id="webtolead">
+        <h2>Salesforce Web-To-Lead Sample Form</h2>
 
-        <!-- Debugging - Optional -->
-        <!--
-        <input type="hidden" name="debug" value="1">
-        <input type="hidden" name="debugEmail" value="atrimyself@gmail.com">
-        -->
+        <!-- Salesforce Web-to-Lead Form Inserted Here -->
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type="hidden" name="oid" value="00DgL000008xKnh">
+            <input type="hidden" name="retURL" value="https://parrotcodes.github.io/GMS-Final-Project-SalesforceApp/">
 
-        <label for="name">Contact Name</label>
-        <input id="name" maxlength="80" name="name" type="text">
+            <label for="first_name">First Name</label>
+            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" />
 
-        <label for="email">Email</label>
-        <input id="email" maxlength="80" name="email" type="email">
+            <label for="last_name">Last Name</label>
+            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required />
 
-        <label for="phone">Phone</label>
-        <input id="phone" maxlength="40" name="phone" type="text">
+            <label for="email">Email</label>
+            <input id="email" maxlength="80" name="email" size="20" type="email" required />
 
-        <label for="subject">Subject</label>
-        <input id="subject" maxlength="80" name="subject" type="text">
+            <label for="mobile">Mobile</label>
+            <input id="mobile" maxlength="40" name="mobile" size="20" type="text" />
 
-        <label for="type">Type</label>
-        <select id="type" name="type">
-            <option value="">--None--</option>
-            <option value="Mechanical">Mechanical</option>
-            <option value="Electrical">Electrical</option>
-            <option value="Electronic">Electronic</option>
-            <option value="Structural">Structural</option>
-            <option value="Other">Other</option>
-        </select>
+            <label for="company">Company</label>
+            <input id="company" maxlength="40" name="company" size="20" type="text" required />
 
-        <label for="reason">Case Reason</label>
-        <select id="reason" name="reason">
-            <option value="">--None--</option>
-            <option value="Installation">Installation</option>
-            <option value="Equipment Complexity">Equipment Complexity</option>
-            <option value="Performance">Performance</option>
-            <option value="Breakdown">Breakdown</option>
-            <option value="Equipment Design">Equipment Design</option>
-            <option value="Feedback">Feedback</option>
-            <option value="Other">Other</option>
-        </select>
+            <label for="vehicle">Vehicle Type</label>
+            <select id="vehicle" name="Vehicle_Type__c">
+                <option value="">--None--</option>
+                <option value="Car">Car</option>
+                <option value="Bike">Bike</option>
+                <option value="Truck">Truck</option>
+            </select>
 
-        <label for="priority">Priority</label>
-        <select id="priority" name="priority">
-            <option value="">--None--</option>
-            <option value="High">High</option>
-            <option value="Medium">Medium</option>
-            <option value="Low">Low</option>
-        </select>
+            <label for="desc">Service Requested</label>
+            <textarea name="Service_Requested__c" rows="4"></textarea>
 
-        <label for="description">Description</label>
-        <textarea id="description" name="description"></textarea>
+            <button type="submit">Submit Lead</button>
+        </form>
+    </div>
 
-        <button type="submit">Submit Case</button>
-    </form>
-</div>
+    <!-- ✅ UPDATED WEB-TO-CASE FORM -->
+    <div class="container" id="webtocase">
+        <h2>Salesforce Web-To-Case Sample Form</h2>
 
-<footer>
-    <p><strong>Garage Management System</strong><br>
-       ParrotCodes Pvt. Ltd<br>
-       Hyderabad, Telangana, India</p>
+        <!-- Salesforce Web-to-Case Form Inserted Here -->
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgL000008xKnh" method="POST">
 
-    <p>
-        <a href="https://facebook.com">Facebook</a> |
-        <a href="https://instagram.com">Instagram</a> |
-        <a href="https://linkedin.com">LinkedIn</a> |
-        <a href="https://twitter.com">Twitter/X</a>
-    </p>
+            <input type="hidden" name="orgid" value="00DgL000008xKnh">
+            <input type="hidden" name="retURL" value="https://parrotcodes.github.io/GMS-Final-Project-SalesforceApp/">
 
-    <p>&copy; 2025 Garage Management System. All Rights Reserved.</p>
-</footer>
+            <label for="name">Contact Name</label>
+            <input id="name" maxlength="80" name="name" type="text" required />
 
+            <label for="email">Email</label>
+            <input id="email" maxlength="80" name="email" type="email" required />
+
+            <label for="phone">Phone</label>
+            <input id="phone" maxlength="40" name="phone" type="text" />
+
+            <label for="subject">Subject</label>
+            <input id="subject" maxlength="80" name="subject" type="text" required />
+
+            <label for="type">Type</label>
+            <select id="type" name="type">
+                <option value="">--None--</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Electronic">Electronic</option>
+                <option value="Structural">Structural</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="reason">Case Reason</label>
+            <select id="reason" name="reason">
+                <option value="">--None--</option>
+                <option value="Installation">Installation</option>
+                <option value="Equipment Complexity">Equipment Complexity</option>
+                <option value="Performance">Performance</option>
+                <option value="Breakdown">Breakdown</option>
+                <option value="Equipment Design">Equipment Design</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="priority">Priority</label>
+            <select id="priority" name="priority">
+                <option value="">--None--</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+
+            <label for="description">Description</label>
+            <textarea name="description" rows="5"></textarea>
+
+            <button type="submit">Submit Case</button>
+        </form>
+    </div>
+
+    <div class="container" id="services">
+        <h2>Our Garage Services</h2>
+        <p>✔ General Service</p>
+        <p>✔ Oil Change</p>
+        <p>✔ Engine Repair</p>
+        <p>✔ Brake Service</p>
+        <p>✔ Spare Parts Replacement</p>
+        <p>✔ Full Vehicle Inspection</p>
+    </div>
+
+    <footer>
+        <p><strong>GMS Garage Management System Pvt. Ltd.</strong></p>
+        <p>Address: 123 Auto Street, Mechanic Nagar, Hyderabad, India - 500001</p>
+        <p>Email: support@gmsgarage.com | Phone: +91 98765 43210</p>
+        <p>
+            Follow Us:
+            <a href="#" style="color:#00d4ff; text-decoration:none;">Facebook</a> |
+            <a href="#" style="color:#00d4ff; text-decoration:none;">Instagram</a> |
+            <a href="#" style="color:#00d4ff; text-decoration:none;">LinkedIn</a> |
+            <a href="#" style="color:#00d4ff; text-decoration:none;">YouTube</a>
+        </p>
+        <p>© 2025 GMS Company | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
