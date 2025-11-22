@@ -92,6 +92,7 @@
     </style>
 </head>
 <body>
+
     <header>
         <h1>Garage Management System (GMS)</h1>
         <p>Your Trusted Vehicle Service Partner</p>
@@ -107,104 +108,105 @@
         Welcome to the GMS Company Website
     </div>
 
-    <!-- ✅ UPDATED WEB-TO-LEAD FORM -->
+    <!-- WEB TO LEAD FORM -->
     <div class="container" id="webtolead">
         <h2>Salesforce Web-To-Lead Sample Form</h2>
-
-        <!-- Salesforce Web-to-Lead Form Inserted Here -->
+        
         <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-            <input type="hidden" name="oid" value="00DgL000008xKnh">
-            <input type="hidden" name="retURL" value="https://parrotcodes.github.io/GMS-Final-Project-SalesforceApp/">
 
-            <label for="first_name">First Name</label>
-            <input id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+            <input type="hidden" name="oid" value="YOUR_SF_ORG_ID">
+            <input type="hidden" name="retURL" value="https://yourwebsite.com/thankyou.html">
 
-            <label for="last_name">Last Name</label>
-            <input id="last_name" maxlength="80" name="last_name" size="20" type="text" required />
+            <!-- Optional Debugging -->
+            <input type="hidden" name="debug" value="1">
+            <input type="hidden" name="debugEmail" value="test@gmail.com">
 
-            <label for="email">Email</label>
-            <input id="email" maxlength="80" name="email" size="20" type="email" required />
+            <label>Full Name *</label>
+            <input type="text" name="last_name" required>
 
-            <label for="mobile">Mobile</label>
-            <input id="mobile" maxlength="40" name="mobile" size="20" type="text" />
+            <label>Company</label>
+            <input type="text" name="company">
 
-            <label for="company">Company</label>
-            <input id="company" maxlength="40" name="company" size="20" type="text" required />
+            <label>Email *</label>
+            <input type="email" name="email" required>
 
-            <label for="vehicle">Vehicle Type</label>
-            <select id="vehicle" name="Vehicle_Type__c">
-                <option value="">--None--</option>
+            <label>Phone</label>
+            <input type="text" name="phone">
+
+            <label>Vehicle Type</label>
+            <select name="Vehicle_Type__c">
                 <option value="Car">Car</option>
                 <option value="Bike">Bike</option>
                 <option value="Truck">Truck</option>
             </select>
 
-            <label for="desc">Service Requested</label>
-            <textarea name="Service_Requested__c" rows="4"></textarea>
+            <label>Vehicle Number</label>
+            <input type="text" name="Vehicle_Number__c">
+
+            <label>Service Needed</label>
+            <input type="text" name="Service_Requested__c">
+
+            <label>Lead Source</label>
+            <select name="lead_source">
+                <option value="Website">Website</option>
+                <option value="Social Media">Social Media</option>
+                <option value="Referral">Referral</option>
+            </select>
 
             <button type="submit">Submit Lead</button>
         </form>
     </div>
 
-    <!-- ✅ UPDATED WEB-TO-CASE FORM -->
+    <!-- WEB TO CASE FORM -->
     <div class="container" id="webtocase">
         <h2>Salesforce Web-To-Case Sample Form</h2>
 
-        <!-- Salesforce Web-to-Case Form Inserted Here -->
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgL000008xKnh" method="POST">
+        <form action="https://yourInstance.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
 
-            <input type="hidden" name="orgid" value="00DgL000008xKnh">
-            <input type="hidden" name="retURL" value="https://parrotcodes.github.io/GMS-Final-Project-SalesforceApp/">
+            <input type="hidden" name="orgid" value="YOUR_SF_ORG_ID">
+            <input type="hidden" name="retURL" value="https://yourwebsite.com/case-success.html">
 
-            <label for="name">Contact Name</label>
-            <input id="name" maxlength="80" name="name" type="text" required />
+            <!-- Optional Debug -->
+            <input type="hidden" name="debug" value="1">
+            <input type="hidden" name="debugEmail" value="test@gmail.com">
 
-            <label for="email">Email</label>
-            <input id="email" maxlength="80" name="email" type="email" required />
+            <label>Contact Name *</label>
+            <input type="text" name="name" required>
 
-            <label for="phone">Phone</label>
-            <input id="phone" maxlength="40" name="phone" type="text" />
+            <label>Email *</label>
+            <input type="email" name="email" required>
 
-            <label for="subject">Subject</label>
-            <input id="subject" maxlength="80" name="subject" type="text" required />
+            <label>Phone</label>
+            <input type="text" name="phone">
 
-            <label for="type">Type</label>
-            <select id="type" name="type">
-                <option value="">--None--</option>
-                <option value="Mechanical">Mechanical</option>
-                <option value="Electrical">Electrical</option>
-                <option value="Electronic">Electronic</option>
-                <option value="Structural">Structural</option>
-                <option value="Other">Other</option>
-            </select>
+            <label>Subject *</label>
+            <input type="text" name="subject" required>
 
-            <label for="reason">Case Reason</label>
-            <select id="reason" name="reason">
-                <option value="">--None--</option>
-                <option value="Installation">Installation</option>
-                <option value="Equipment Complexity">Equipment Complexity</option>
-                <option value="Performance">Performance</option>
-                <option value="Breakdown">Breakdown</option>
-                <option value="Equipment Design">Equipment Design</option>
-                <option value="Feedback">Feedback</option>
-                <option value="Other">Other</option>
-            </select>
-
-            <label for="priority">Priority</label>
-            <select id="priority" name="priority">
-                <option value="">--None--</option>
-                <option value="High">High</option>
-                <option value="Medium">Medium</option>
-                <option value="Low">Low</option>
-            </select>
-
-            <label for="description">Description</label>
+            <label>Issue Description</label>
             <textarea name="description" rows="5"></textarea>
+
+            <label>Vehicle Number</label>
+            <input type="text" name="Vehicle_Number__c">
+
+            <label>Case Origin *</label>
+            <select name="origin">
+                <option value="Web">Web</option>
+                <option value="Phone">Phone</option>
+                <option value="Email">Email</option>
+            </select>
+
+            <label>Priority</label>
+            <select name="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
 
             <button type="submit">Submit Case</button>
         </form>
     </div>
 
+    <!-- SERVICES -->
     <div class="container" id="services">
         <h2>Our Garage Services</h2>
         <p>✔ General Service</p>
@@ -215,18 +217,20 @@
         <p>✔ Full Vehicle Inspection</p>
     </div>
 
+    <!-- FOOTER -->
     <footer>
         <p><strong>GMS Garage Management System Pvt. Ltd.</strong></p>
         <p>Address: 123 Auto Street, Mechanic Nagar, Hyderabad, India - 500001</p>
         <p>Email: support@gmsgarage.com | Phone: +91 98765 43210</p>
         <p>
             Follow Us:
-            <a href="#" style="color:#00d4ff; text-decoration:none;">Facebook</a> |
-            <a href="#" style="color:#00d4ff; text-decoration:none;">Instagram</a> |
-            <a href="#" style="color:#00d4ff; text-decoration:none;">LinkedIn</a> |
-            <a href="#" style="color:#00d4ff; text-decoration:none;">YouTube</a>
+            <a href="#" style="color:#00d4ff;">Facebook</a> |
+            <a href="#" style="color:#00d4ff;">Instagram</a> |
+            <a href="#" style="color:#00d4ff;">LinkedIn</a> |
+            <a href="#" style="color:#00d4ff;">YouTube</a>
         </p>
         <p>© 2025 GMS Company | All Rights Reserved</p>
     </footer>
+
 </body>
 </html>
